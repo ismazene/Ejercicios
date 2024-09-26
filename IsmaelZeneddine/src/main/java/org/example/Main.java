@@ -8,5 +8,15 @@ public class Main {
 
         //Operadores operadores= new Operadores();
         //operadores.aritmeticos();
+
+        //Operadores operadores= new Operadores();
+        //operadores.asignacion();
+
+        //Operadores operadores= new Operadores();
+        //operadores.relaciones();
+
+        Operadores operadores= new Operadores();
+        operadores.logicos();
+
     }
 }
