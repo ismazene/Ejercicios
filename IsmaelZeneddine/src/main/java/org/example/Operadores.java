@@ -1,6 +1,8 @@
 package org.example;
+import java.util.Scanner;
 
 public class Operadores {
+
     public void aritmeticos() {
 
         int a = 20, b = 10, c = 0, d = 20, e = 40, f = 30;
@@ -54,5 +56,45 @@ public class Operadores {
         System.out.println("a,b,e,f (usando operadores cortos)= " +
                 a + "," + b + "," + e + "," + f);
 
+    }
+
+    public void relaciones() {
+
+        int a = 20, b = 10;
+        String x = "Thank", y = "Thank";
+        int ar[] = {1, 2, 3};
+        int br[] = {1, 2, 3};
+        boolean condicion = true;
+        //varios operadores condicionales
+        System.out.println("a == b :" + (a == b));
+        System.out.println("a < b :" + (a < b));
+        System.out.println("a <= b :" + (a <= b));
+        System.out.println("a > b :" + (a > b));
+        System.out.println("a >= b :" + (a >= b));
+        System.out.println("a != b :" + (a != b));
+        // Los Arrays no se pueden comparar con
+        // operadores relacionales porque los objetos
+        // almacenan referencias, mas no el valor
+        System.out.println("x == y : " + (ar == br));
+        System.out.println("condicion==true :" + (condicion == true));
+
+    }
+
+    public void logicos() {
+
+        String x = "java";
+        String y = "desdecero";
+        Scanner s = new Scanner(System.in);
+        System.out.print("Ingrese usuario:");
+        String uuid = s.next();
+        System.out.print("Ingrese contraseña:");
+        String upwd = s.next();
+        // Verifique si el nombre de usuario y la contraseña coinciden o no.
+        if ((uuid.equals(x) && upwd.equals(y)) ||
+                (uuid.equals(y) && upwd.equals(x))) {
+            System.out.println("Bienvenido usuario.");
+        } else {
+            System.out.println("ID o Contraseña equivocada");
+        }
     }
 }
