@@ -1,3 +1,4 @@
+
 package org.example;
 import java.util.Scanner;
 
@@ -12,8 +13,8 @@ public class PRACTICAS {
             System.out.println("Hola " + nombre + ". Introduce tu edad:");
             edad = entrada.nextInt();
 
-            if (edad > 0) { // Verificamos que la edad sea positiva
-                break; // Salimos del bucle si la edad es positiva
+            if (edad > 0) {
+                break;
             } else {
                 System.out.println("La edad debe ser un número positivo. Intenta de nuevo.");
             }
@@ -21,7 +22,7 @@ public class PRACTICAS {
 
         if (edad < 18) {
             System.out.println("Lo siento " + nombre + ". No puedes votar.");
-            int resultado = 18 - edad; // Calculamos los años que faltan
+            int resultado = 18 - edad;
             System.out.println("Te faltan " + resultado + " años para ser mayor de edad.");
         } else {
             System.out.println("Enhorabuena " + nombre + ". Puedes votar.");
