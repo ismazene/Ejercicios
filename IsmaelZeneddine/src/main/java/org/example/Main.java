@@ -23,16 +23,23 @@ public class Main {
         //excepciones.control_excepciones();
 
         //BATERIA "OPCIONALES"
+        //Ejercicios ejercicios = new Ejercicios();
+        //ejercicios.ejer1();
 
         //Ejercicios ejercicios = new Ejercicios();
         //ejercicios.ejer2();
 
+        //Ejercicios ejercicios = new Ejercicios();
+        //ejercicios.ejer3();
+
+        Ejercicios ejercicios = new Ejercicios();
+        ejercicios.ejer4();
 
         //PRACTICAS
             //PRACTICAS practicas = new PRACTICAS();
             //practicas.practica3();
 
-            PRACTICAS practicas = new PRACTICAS();
-            practicas.practica4();
+            //PRACTICAS practicas = new PRACTICAS();
+            //practicas.practica4();
     }
 }

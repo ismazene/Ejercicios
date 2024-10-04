@@ -1,5 +1,6 @@
 
 package org.example;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class PRACTICAS {
@@ -28,21 +29,48 @@ public class PRACTICAS {
             System.out.println("Enhorabuena " + nombre + ". Puedes votar.");
         }
     }
-
     public void practica4() {
         Scanner entrada = new Scanner(System.in);
+        int mult1 = 0;
+        int mult2 = 0;
 
-        System.out.println("Introduce el primer multiplicando (3 cifras):");
-        int mult1 = entrada.nextInt();
 
-        System.out.println("Introduce el segundo multiplicando (3 cifras):");
-        int mult2 = entrada.nextInt();
+        while (true) {
+            try {
+                System.out.println("Introduce el primer multiplicando (3 cifras):");
+                mult1 = entrada.nextInt();
 
-        int resultado = mult1 * mult2;
-        System.out.println("El producto de la multiplicación es: " + resultado);
-        System.out.println("El proceso es: ");
-        System.out.println("  " + mult1);
-        System.out.println("x " + mult2);
-        System.out.println("-------");
+                mult2 = entrada.nextInt();
+
+                if (mult1 > 99 && mult2 > 99) {
+                    break;
+                } else System.out.println("ERROR:Debes de introducir un numero positivo");
+            } catch (InputMismatchException er) {
+                System.out.println("ERROR: Debes introducir un numero en positivo");
+            }
+
+
+            int resultado = mult1 * mult2;
+            System.out.println("El producto de la multiplicación es: " + resultado);
+            System.out.println("El proceso es: ");
+            System.out.println("  " + mult1);
+            System.out.println("x " + mult2);
+            System.out.println("-------");
+
+            String multiplicacion = Integer.toString(mult2);
+            String digito = multiplicacion.substring(0, 1);
+            int dig1 = Integer.parseInt(digito);
+            String digito1 = multiplicacion.substring(1, 2);
+            int dig2 = Integer.parseInt(digito1);
+            String digito2 = multiplicacion.substring(2, 3);
+            int dig3 = Integer.parseInt(digito2);
+
+            System.out.println("   " + mult1 * dig1);
+            System.out.println("  " + mult1 * dig2 + "x");
+            System.out.println(" " + mult1 * dig1 + "xx");
+            System.out.println("-------");
+            System.out.println(mult1 * mult2);
+
+        }
     }
 }
