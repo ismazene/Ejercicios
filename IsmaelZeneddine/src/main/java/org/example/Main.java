@@ -32,14 +32,14 @@ public class Main {
         //Ejercicios ejercicios = new Ejercicios();
         //ejercicios.ejer3();
 
-        Ejercicios ejercicios = new Ejercicios();
-        ejercicios.ejer4();
+        //Ejercicios ejercicios = new Ejercicios();
+        //ejercicios.ejer4();
 
         //PRACTICAS
             //PRACTICAS practicas = new PRACTICAS();
             //practicas.practica3();
 
-            //PRACTICAS practicas = new PRACTICAS();
-            //practicas.practica4();
+            PRACTICAS practicas = new PRACTICAS();
+            practicas.practica4();
     }
 }
