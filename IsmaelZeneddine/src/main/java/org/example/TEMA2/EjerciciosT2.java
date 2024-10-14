@@ -1,6 +1,5 @@
 package org.example.TEMA2;
 import java.util.Scanner;
-import java.util.Scanner;
 
 
 public class EjerciciosT2 {
@@ -14,7 +13,6 @@ public class EjerciciosT2 {
         String espacios = Frase.replace("", "");
 
     }
-
     public void ejer4() {
         Scanner entrada = new Scanner(System.in);
         String texto = "Hola Mundo, bienvenido  Mundo. Mundo es genial";

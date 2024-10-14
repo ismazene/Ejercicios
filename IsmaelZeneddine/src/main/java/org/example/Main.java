@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.TEMA2.CosasString;
 import org.example.TEMA2.EjerciciosT2;
+import org.example.TEMA2.PRACTICAST2;
 
 public class Main {
     public static void main(String[] args) {
@@ -50,7 +51,13 @@ public class Main {
             //CosasString cosasString = new CosasString();
             //cosasString.caracteres();
 
-            EjerciciosT2 ejercicios = new EjerciciosT2();
-            ejercicios.ejer1();
+            //EjerciciosT2 ejercicios = new EjerciciosT2();
+            //ejercicios.ejer1();
+
+        //PRACTICAS
+
+        PRACTICAST2 practicast2 = new PRACTICAST2();
+        practicast2.practica1();
+
     }
 }
