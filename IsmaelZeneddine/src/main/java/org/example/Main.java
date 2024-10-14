@@ -1,5 +1,8 @@
 package org.example;
 
+import org.example.TEMA2.CosasString;
+import org.example.TEMA2.EjerciciosT2;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -39,7 +42,15 @@ public class Main {
             //PRACTICAS practicas = new PRACTICAS();
             //practicas.practica3();
 
-            PRACTICAS practicas = new PRACTICAS();
-            practicas.practica4();
+            //PRACTICAS practicas = new PRACTICAS();
+            //practicas.practica4();
+
+        //TEMA 2
+
+            //CosasString cosasString = new CosasString();
+            //cosasString.caracteres();
+
+            EjerciciosT2 ejercicios = new EjerciciosT2();
+            ejercicios.ejer1();
     }
 }
