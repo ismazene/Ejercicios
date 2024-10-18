@@ -20,4 +20,13 @@ public class Excepciones {
             }
         }
     }
+    public void expcepciones(){
+        Scanner teclado = new Scanner(System.in);
+
+        int dividendo = teclado.nextInt();
+        String divisor = teclado.next();
+        int divisor_entero = Integer.parseInt(divisor);
+
+        int resultado = dividendo/divisor_entero;
+    }
 }

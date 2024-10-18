@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.TEMA2.ACTIVIDADES;
 import org.example.TEMA2.CosasString;
 import org.example.TEMA2.EjerciciosT2;
 import org.example.TEMA2.PRACTICAST2;
@@ -24,7 +25,7 @@ public class Main {
         //operadores.logicos();
 
         //Excepciones excepciones = new Excepciones();
-        //excepciones.control_excepciones();
+        //excepciones.expcepciones();
 
         //BATERIA "OPCIONALES"
         //Ejercicios ejercicios = new Ejercicios();
@@ -51,13 +52,24 @@ public class Main {
             //CosasString cosasString = new CosasString();
             //cosasString.caracteres();
 
-            //EjerciciosT2 ejercicios = new EjerciciosT2();
-            //ejercicios.ejer1();
+            //EjerciciosT2 ejerciciosT2 = new EjerciciosT2();
+            //ejerciciosT2.ejer1();
+
+            //EjerciciosT2 ejerciciosT2 = new EjerciciosT2();
+            //ejerciciosT2.ejerAmpliacion();
 
         //PRACTICAS
 
+        //PRACTICAST2 practicast2 = new PRACTICAST2();
+        //practicast2.practica1();
+
         PRACTICAST2 practicast2 = new PRACTICAST2();
-        practicast2.practica1();
+        practicast2.practica2();
+
+        //ACTIVIDADES
+
+        //ACTIVIDADES actividades = new ACTIVIDADES();
+        //actividades.actividad1();
 
     }
 }
