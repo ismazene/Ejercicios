@@ -70,7 +70,7 @@ public class PRACTICAST2 {
         }
     }
     public void practica2() {
-        Scanner entrada = new Scanner(System.in);  // Crear el Scanner
+        Scanner entrada = new Scanner(System.in);
 
         try {
             // Dar la bienvenida al usuario
@@ -86,6 +86,8 @@ public class PRACTICAST2 {
                 //Nos saca del programa con el return
                 return;
             }
+
+            entrada.nextLine();
 
             // Pedir el signo de la operación
             System.out.println("Introduce el signo a aplicar (+,-,/,x,R):");
