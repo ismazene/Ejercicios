@@ -1,9 +1,5 @@
 package org.example;
-
-import org.example.TEMA2.ACTIVIDADES;
-import org.example.TEMA2.CosasString;
-import org.example.TEMA2.EjerciciosT2;
-import org.example.TEMA2.PRACTICAST2;
+import org.example.TEMA2.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -28,19 +24,20 @@ public class Main {
         //excepciones.expcepciones();
 
         //BATERIA "OPCIONALES"
-        //Ejercicios ejercicios = new Ejercicios();
-        //ejercicios.ejer1();
+            //Ejercicios ejercicios = new Ejercicios();
+            //ejercicios.ejer1();
 
-        //Ejercicios ejercicios = new Ejercicios();
-        //ejercicios.ejer2();
+            //Ejercicios ejercicios = new Ejercicios();
+            //ejercicios.ejer2();
 
-        //Ejercicios ejercicios = new Ejercicios();
-        //ejercicios.ejer3();
+            //Ejercicios ejercicios = new Ejercicios();
+            //ejercicios.ejer3();
 
-        //Ejercicios ejercicios = new Ejercicios();
-        //ejercicios.ejer4();
+            //Ejercicios ejercicios = new Ejercicios();
+            //ejercicios.ejer4();
 
         //PRACTICAS
+
             //PRACTICAS practicas = new PRACTICAS();
             //practicas.practica3();
 
@@ -58,18 +55,36 @@ public class Main {
             //EjerciciosT2 ejerciciosT2 = new EjerciciosT2();
             //ejerciciosT2.ejerAmpliacion();
 
-        //PRACTICAS
+        //PRACTICAS T2
 
-        //PRACTICAST2 practicast2 = new PRACTICAST2();
-        //practicast2.practica1();
+            //PRACTICAST2 practicast2 = new PRACTICAST2();
+            //practicast2.practica1();
 
-        PRACTICAST2 practicast2 = new PRACTICAST2();
-        practicast2.practica2();
+            //PRACTICAST2 practicast2 = new PRACTICAST2();
+            //practicast2.practica2();
 
         //ACTIVIDADES
 
-        //ACTIVIDADES actividades = new ACTIVIDADES();
-        //actividades.actividad1();
+            //ACTIVIDADES actividades = new ACTIVIDADES();
+            //actividades.actividad1();
+
+
+        //BATERIA DE EJERCICIOS T2 BUCLES
+
+            //Bateria_bucles bateriaBucles = new Bateria_bucles();
+            //bateriaBucles.ejer1();
+
+            //Bateria_bucles bateriaBucles = new Bateria_bucles();
+            //bateriaBucles.ejer2();
+
+            //Bateria_bucles bateriaBucles = new Bateria_bucles();
+            //bateriaBucles.ejer3();
+
+            //Bateria_bucles bateriaBucles = new Bateria_bucles();
+            //bateriaBucles.ejer4();
+
+            Bateria_bucles bateriaBucles = new Bateria_bucles();
+            bateriaBucles.ejer5();
 
     }
 }
