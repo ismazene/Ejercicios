@@ -4,6 +4,7 @@ public class CosasString {
     public void caracteres() {
         String frase = "Me porto mal en clase y no lo reconozco";
 
+        //VERIFICAR ENTRADA DEL USUARIO
         int tamanyo = frase.length();
         System.out.println("El tamaño de mi frase es " + tamanyo);
 

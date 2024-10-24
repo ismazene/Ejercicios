@@ -63,6 +63,9 @@ public class Main {
             //PRACTICAST2 practicast2 = new PRACTICAST2();
             //practicast2.practica2();
 
+            PRACTICAST2 practicast2 = new PRACTICAST2();
+            practicast2.practica3();
+
         //ACTIVIDADES
 
             //ACTIVIDADES actividades = new ACTIVIDADES();
@@ -83,8 +86,9 @@ public class Main {
             //Bateria_bucles bateriaBucles = new Bateria_bucles();
             //bateriaBucles.ejer4();
 
-            Bateria_bucles bateriaBucles = new Bateria_bucles();
-            bateriaBucles.ejer5();
+            //Bateria_bucles bateriaBucles = new Bateria_bucles();
+            //bateriaBucles.ejer5();
 
+        // la X la interrogacion si pongo una letra que sea 10 caracteres no poder poner dos X
     }
 }
