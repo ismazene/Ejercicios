@@ -63,8 +63,8 @@ public class Main {
             //PRACTICAST2 practicast2 = new PRACTICAST2();
             //practicast2.practica2();
 
-            PRACTICAST2 practicast2 = new PRACTICAST2();
-            practicast2.practica3();
+            //PRACTICAST2 practicast2 = new PRACTICAST2();
+            //practicast2.practica3();
 
         //ACTIVIDADES
 
@@ -89,6 +89,14 @@ public class Main {
             //Bateria_bucles bateriaBucles = new Bateria_bucles();
             //bateriaBucles.ejer5();
 
-        // la X la interrogacion si pongo una letra que sea 10 caracteres no poder poner dos X
+        //RANDOM
+            //EjerciciosT2 ejerciciosT2 = new EjerciciosT2();
+            //ejerciciosT2.ejer1_random();
+            //ejerciciosT2.ejer2_random();
+            //ejerciciosT2.ejer3_random();
+            //ejerciciosT2.ejer4_random();
+
+
+
     }
 }
