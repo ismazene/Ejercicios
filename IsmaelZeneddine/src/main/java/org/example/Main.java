@@ -63,8 +63,8 @@ public class Main {
             //PRACTICAST2 practicast2 = new PRACTICAST2();
             //practicast2.practica2();
 
-            //PRACTICAST2 practicast2 = new PRACTICAST2();
-            //practicast2.practica3();
+            PRACTICAST2 practicast2 = new PRACTICAST2();
+            practicast2.practica3();
 
         //ACTIVIDADES
 
@@ -96,6 +96,14 @@ public class Main {
             //ejerciciosT2.ejer3_random();
             //ejerciciosT2.ejer4_random();
 
+        //PRE EXAMEN
+        //PRE_EXAMEN preExamen = new PRE_EXAMEN();
+        //preExamen.ejer1();
+        //preExamen.ejer2();
+        //preExamen.ejer3();
+        //preExamen.ejer4();
+        //preExamen.ejer5();
+        //preExamen.ejer6();
 
 
     }

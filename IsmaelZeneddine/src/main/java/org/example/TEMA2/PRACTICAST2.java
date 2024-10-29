@@ -149,26 +149,25 @@ public class PRACTICAST2 {
     }
 
     public void practica3() {
-        // Imprime un mensaje para que el usuario introduzca el ISBN de 10 dígitos
+        // Introucir el ISBN
         System.out.println("Introduce el ISBN de 10 dígitos:");
         try {
-            // Lee la lo que pone el usuario, que debería ser el ISBN
+            // Leer el ISBN
             String isbnEntrada = entrada.nextLine();
-            // Inicializa el multiplicador en 10
+            //Definir variables
             int factorMultiplicador = 10;
-            // Acumular la suma total de los dígitos multiplicados
             int sumaTotal = 0;
             // Definir el símbolo de interrogación
             String signoInterrogacion = "?";
 
-            // Verifica si la longitud del ISBN sea de 10 caracteres
+            // Verifica si la longitud del ISBN
             if (isbnEntrada.length() != 10) {
-                // Mensaje de error
+                // Si no es de 10 mensjae de error
                 System.out.println("Error: El ISBN debe tener exactamente 10 dígitos.");
             } else {
-                // Buscar posición de un ? en la cadena de ISBN
+                // Buscar ? en el ISBN
                 int Signo = isbnEntrada.indexOf(signoInterrogacion);
-                // Verificar si hay una 'X' en una posición diferente a la última
+                // Ver si hay una X en otro sitio que no sea al final
                 int indexX = isbnEntrada.indexOf('X');
 
                 if (indexX != -1 && indexX != 9) {
@@ -184,46 +183,54 @@ public class PRACTICAST2 {
                                 reemplazo = String.valueOf(i);
                             }
 
-                            // Reemplaza el signo de ? en el ISBN con un valor valido
+                            // Reemplaza el signo de ? en el ISBN por el numero que corresponda
                             String pruebaISBN = isbnEntrada.substring(0, Signo) + reemplazo + isbnEntrada.substring(Signo + 1);
 
-                            // Reinicia la suma
                             sumaTotal = 0;
-                            // Reinicia el multiplicador
                             factorMultiplicador = 10;
 
                             // Recorre los 10 caracteres del ISBN para calcular la suma
                             for (int j = 0; j < 10; j++) {
                                 char digitoActual = pruebaISBN.charAt(j);
-                                int digito = (digitoActual == 'X') ? 10 : Integer.parseInt(String.valueOf(digitoActual));
+                                int digito;
+                                if (digitoActual == 'X') {
+                                    digito = 10;
+                                } else {
+                                    digito = Integer.parseInt(String.valueOf(digitoActual));
+                                }
                                 sumaTotal += digito * factorMultiplicador;
                                 factorMultiplicador--;
                             }
 
-                            // Verifica si la suma total es divisible por 11
+                            // Divisible por 11
                             if (sumaTotal % 11 == 0) {
                                 System.out.println("El ISBN es válido cuando ? es reemplazado por: " + reemplazo);
                             }
                         }
                     } else {
-                        // Si no hay un signo de ?, hace el ISBN directamente
+                        // Si no hay un signo ? hace el ISBN directamente
                         sumaTotal = 0;
                         factorMultiplicador = 10;
 
                         // Recorre los 10 caracteres del ISBN para calcular la suma
                         for (int j = 0; j < 10; j++) {
                             char digitoActual = isbnEntrada.charAt(j);
-                            int digito = (digitoActual == 'X') ? 10 : Integer.parseInt(String.valueOf(digitoActual));
+                            int digito;
+                            if (digitoActual == 'X') {
+                                digito = 10;
+                            } else {
+                                digito = Integer.parseInt(String.valueOf(digitoActual));
+                            }
                             sumaTotal += digito * factorMultiplicador;
                             factorMultiplicador--;
                         }
 
-                        // Verifica si la suma total es divisible por 11
+                        // Divisible por 11
                         if (sumaTotal % 11 == 0) {
-                            // Si es divisible, muestra que el ISBN es válido
+                            // Si es divisible
                             System.out.println("El ISBN es válido");
                         } else {
-                            // Si no es divisible, muestra que el ISBN no es válido
+                            // Si no es divisible
                             System.out.println("El ISBN no es válido");
                         }
                     }
