@@ -237,7 +237,7 @@ public class PRACTICAST2 {
                 }
             }
 
-            // Capturar la excepción
+            // Excepciones
         } catch (NumberFormatException er) {
             // Mostrar mensaje de error
             System.out.println("Debes introducir exactamente 10 dígitos");
