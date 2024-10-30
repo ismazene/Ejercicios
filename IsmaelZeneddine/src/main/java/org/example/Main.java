@@ -63,8 +63,8 @@ public class Main {
             //PRACTICAST2 practicast2 = new PRACTICAST2();
             //practicast2.practica2();
 
-            PRACTICAST2 practicast2 = new PRACTICAST2();
-            practicast2.practica3();
+            //PRACTICAST2 practicast2 = new PRACTICAST2();
+            //practicast2.practica3();
 
         //ACTIVIDADES
 
@@ -74,8 +74,8 @@ public class Main {
 
         //BATERIA DE EJERCICIOS T2 BUCLES
 
-            //Bateria_bucles bateriaBucles = new Bateria_bucles();
-            //bateriaBucles.ejer1();
+            Bateria_bucles bateriaBucles = new Bateria_bucles();
+            bateriaBucles.ejer1();
 
             //Bateria_bucles bateriaBucles = new Bateria_bucles();
             //bateriaBucles.ejer2();
@@ -105,6 +105,10 @@ public class Main {
         //preExamen.ejer5();
         //preExamen.ejer6();
 
+        //EXAMEN
+        //org.example.Examen examen = new org.example.Examen();
+        //examen.ejercicio1();
+        //examen.ejercicio2();
 
     }
 }

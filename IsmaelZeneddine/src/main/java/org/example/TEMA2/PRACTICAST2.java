@@ -150,7 +150,7 @@ public class PRACTICAST2 {
 
     public void practica3() {
         // Introucir el ISBN
-        System.out.println("Introduce el ISBN de 10 dígitos:");
+        System.out.println("Dime un año");
         try {
             // Leer el ISBN
             String isbnEntrada = entrada.nextLine();
