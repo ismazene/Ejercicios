@@ -1,5 +1,9 @@
 package org.example;
 import org.example.TEMA2.*;
+import org.example.TEMA3.EjerciciosT3;
+import org.example.TEMA3.PRACTICAST3;
+import org.example.TEMA3.Vectores;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -74,8 +78,8 @@ public class Main {
 
         //BATERIA DE EJERCICIOS T2 BUCLES
 
-            Bateria_bucles bateriaBucles = new Bateria_bucles();
-            bateriaBucles.ejer1();
+            //Bateria_bucles bateriaBucles = new Bateria_bucles();
+            //bateriaBucles.ejer1();
 
             //Bateria_bucles bateriaBucles = new Bateria_bucles();
             //bateriaBucles.ejer2();
@@ -88,6 +92,7 @@ public class Main {
 
             //Bateria_bucles bateriaBucles = new Bateria_bucles();
             //bateriaBucles.ejer5();
+
 
         //RANDOM
             //EjerciciosT2 ejerciciosT2 = new EjerciciosT2();
@@ -110,5 +115,22 @@ public class Main {
         //examen.ejercicio1();
         //examen.ejercicio2();
 
+        //TEMA 3
+
+        //Vectores vectores = new Vectores();
+        //vectores.vectores();
+
+            //Ejercicios
+            //EjerciciosT3 ejerciciosT3 = new EjerciciosT3();
+            //ejerciciosT3.ejer1();
+            //ejerciciosT3.ejer2();
+            //ejerciciosT3.ejer3();
+            //ejerciciosT3.ejer5();
+
+        PRACTICAST3 practicast3 = new PRACTICAST3();
+        practicast3.practica1();
+
+
     }
 }
+
