@@ -117,8 +117,9 @@ public class Main {
 
         //TEMA 3
 
-        //Vectores vectores = new Vectores();
+        Vectores vectores = new Vectores();
         //vectores.vectores();
+        //vectores.navidad();
 
             //Ejercicios
             //EjerciciosT3 ejerciciosT3 = new EjerciciosT3();
@@ -128,7 +129,8 @@ public class Main {
             //ejerciciosT3.ejer5();
 
         PRACTICAST3 practicast3 = new PRACTICAST3();
-        practicast3.practica1();
+        //practicast3.practica1();
+        practicast3.practica2();
 
 
     }
