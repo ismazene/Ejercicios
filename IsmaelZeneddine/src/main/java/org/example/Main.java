@@ -122,15 +122,18 @@ public class Main {
         //vectores.navidad();
 
             //Ejercicios
-            //EjerciciosT3 ejerciciosT3 = new EjerciciosT3();
+            EjerciciosT3 ejerciciosT3 = new EjerciciosT3();
             //ejerciciosT3.ejer1();
             //ejerciciosT3.ejer2();
             //ejerciciosT3.ejer3();
             //ejerciciosT3.ejer5();
+            //ejerciciosT3.triangulo();
+        //ejerciciosT3.tablasMultiplicar();
 
         PRACTICAST3 practicast3 = new PRACTICAST3();
         //practicast3.practica1();
-        practicast3.practica2();
+        //practicast3.practica2();
+        practicast3.practica3();
 
 
     }
