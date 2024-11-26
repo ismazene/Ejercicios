@@ -331,4 +331,63 @@ public class PRACTICAST3 {
             System.out.println("Formato inválido ( x-x-x-x-x-x/R)");
         }
     }
+
+    public void pracica4() {
+        //Sopa de letras
+
+        int filasSopa = 0;
+        int columnasSopa = 0;
+        boolean error = true;
+
+
+        while (error) {
+            try {
+                System.out.println("Introduce el numero de filas:");
+                filasSopa = teclado.nextInt();
+
+                System.out.println("Introduce el numero de columnas:");
+                columnasSopa = teclado.nextInt();
+
+                error = false;
+
+            } catch (Exception e) {
+                System.err.println("Introduce valores validos");
+                teclado.nextLine();
+            }
+        }
+
+        // Crear la matriz para almacenar los caracteres
+        String matriz[][] = new String[filasSopa][columnasSopa];
+
+        // Rellenar la matriz fila por fila
+        try {
+            for (int i = 0; i < filasSopa; i++) {
+                System.out.println("Introduce las letras de la fila " + (i + 1) + ":");
+                String filas = teclado.next(); // Leer una cadena de letras
+
+                // Verificar si la longitud de la cadena es igual al número de columnas
+                if (filas.length() == columnasSopa) {
+                    // Almacenar cada carácter de la cadena en la matriz
+                    for (int j = 0; j < columnasSopa; j++) {
+                        matriz[i][j] = filas; // Guardamos cada letra en la matriz
+                    }
+                } else {
+                    // Si el número de caracteres no coincide con el número de columnas, repetimos la fila
+                    System.err.println("Error: El número de caracteres en la fila no coincide con el número de columnas.");
+                    i--;
+                }
+            }
+        } catch (Exception e) {
+            System.err.println("No has introducido letras");
+        }
+
+        // Imprimir la matriz final
+        System.out.println("La sopa de letras es:");
+        for (int i = 0; i < filasSopa; i++) {
+            for (int j = 0; j < columnasSopa; j++) {
+                System.out.print(matriz[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
 }
