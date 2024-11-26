@@ -38,5 +38,18 @@ public class Vectores {
         }
         System.out.println(resultado);
     }
+    public void primos(){
+        System.out.println("Introduce un numero:");
+        int m = teclado.nextInt();
 
+        antonio:
+        for (int i = 2; i <= m; i++){
+            for (int j = i-1;  j >= 2; j--) {
+                if (i % j == 0) {
+                    continue antonio;
+                }
+            }
+            System.out.println(i + "");
+        }
+    }
 }

@@ -1,6 +1,7 @@
 package org.example;
 import org.example.TEMA2.*;
 import org.example.TEMA3.EjerciciosT3;
+import org.example.TEMA3.Matrices;
 import org.example.TEMA3.PRACTICAST3;
 import org.example.TEMA3.Vectores;
 
@@ -128,12 +129,21 @@ public class Main {
             //ejerciciosT3.ejer3();
             //ejerciciosT3.ejer5();
             //ejerciciosT3.triangulo();
-        //ejerciciosT3.tablasMultiplicar();
+            //ejerciciosT3.tablasMultiplicar();
+            //ejerciciosT3.ejer1buscarMatrices();
+            //ejerciciosT3.ejer2Matrices();
+            ejerciciosT3.extra();
 
-        PRACTICAST3 practicast3 = new PRACTICAST3();
+
+        //PRACTICAST3 practicast3 = new PRACTICAST3();
         //practicast3.practica1();
         //practicast3.practica2();
-        practicast3.practica3();
+        //practicast3.practica3();
+
+        //Matrices matrices = new Matrices();
+        //matrices.matrices();
+        //matrices.matrices2();
+        //matrices.buscarMatriz();
 
 
     }
