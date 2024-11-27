@@ -369,7 +369,7 @@ public class PRACTICAST3 {
                 if (filas.length() == columnasSopa) {
                     // Almacenar cada carácter de la cadena en la matriz
                     for (int j = 0; j < columnasSopa; j++) {
-                        matriz[i][j] = filas; // Guardamos cada letra en la matriz
+                        matriz[i][j] = String.valueOf(filas.charAt(j)); // Guardamos cada letra en la matriz
                     }
                 } else {
                     // Si el número de caracteres no coincide con el número de columnas, repetimos la fila
