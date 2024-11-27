@@ -332,56 +332,50 @@ public class PRACTICAST3 {
         }
     }
 
-    public void pracica4() {
-        //Sopa de letras
-
+    public void practica4() {
+        // Inicialización de variables
         int filasSopa = 0;
         int columnasSopa = 0;
-        boolean error = true;
+        String palabra = "";
 
-
-        while (error) {
+        // Solicitar el número de filas y columnas
+        while (true) {
             try {
                 System.out.println("Introduce el numero de filas:");
                 filasSopa = teclado.nextInt();
-
                 System.out.println("Introduce el numero de columnas:");
                 columnasSopa = teclado.nextInt();
-
-                error = false;
-
+                if (filasSopa > 0 && columnasSopa > 0) {
+                    break; // Si ambos son válidos, salimos del bucle
+                } else {
+                    System.err.println("Por favor, introduce números positivos.");
+                }
             } catch (Exception e) {
-                System.err.println("Introduce valores validos");
-                teclado.nextLine();
+                System.err.println("Introduce valores válidos");
+                teclado.nextLine(); // Limpiar el buffer
             }
         }
 
         // Crear la matriz para almacenar los caracteres
-        String matriz[][] = new String[filasSopa][columnasSopa];
+        String[][] matriz = new String[filasSopa][columnasSopa];
 
-        // Rellenar la matriz fila por fila
-        try {
-            for (int i = 0; i < filasSopa; i++) {
-                System.out.println("Introduce las letras de la fila " + (i + 1) + ":");
-                String filas = teclado.next(); // Leer una cadena de letras
+        // Rellenar la matriz
+        for (int i = 0; i < filasSopa; i++) {
+            System.out.println("Introduce las letras de la fila " + (i + 1) + ":");
+            String fila = teclado.next().toUpperCase(); // Convertir la entrada a mayúsculas
 
-                // Verificar si la longitud de la cadena es igual al número de columnas
-                if (filas.length() == columnasSopa) {
-                    // Almacenar cada carácter de la cadena en la matriz
-                    for (int j = 0; j < columnasSopa; j++) {
-                        matriz[i][j] = String.valueOf(filas.charAt(j)); // Guardamos cada letra en la matriz
-                    }
-                } else {
-                    // Si el número de caracteres no coincide con el número de columnas, repetimos la fila
-                    System.err.println("Error: El número de caracteres en la fila no coincide con el número de columnas.");
-                    i--;
+            // Validar que la fila tenga la longitud correcta y solo contenga letras
+            if (fila.matches("[a-zA-Z]+") && fila.length() == columnasSopa) {
+                for (int j = 0; j < columnasSopa; j++) {
+                    matriz[i][j] = String.valueOf(fila.charAt(j));
                 }
+            } else {
+                System.err.println("La fila debe tener solo letras y una longitud de " + columnasSopa + " caracteres.");
+                i--; // Repetir esta fila
             }
-        } catch (Exception e) {
-            System.err.println("No has introducido letras");
         }
 
-        // Imprimir la matriz final
+        // Mostrar la sopa de letras
         System.out.println("La sopa de letras es:");
         for (int i = 0; i < filasSopa; i++) {
             for (int j = 0; j < columnasSopa; j++) {
@@ -389,5 +383,45 @@ public class PRACTICAST3 {
             }
             System.out.println();
         }
+
+        // Solicitar la palabra a buscar
+        while (true) {
+            System.out.println("Introduce la palabra a buscar:");
+            palabra = teclado.next().toUpperCase(); // Convertir la palabra a mayúsculas
+
+            // Validar que solo contenga letras
+            if (palabra.matches("[a-zA-Z]+")) {
+                break; // Palabra válida
+            } else {
+                System.err.println("La palabra debe contener solo letras, no números ni caracteres especiales.");
+            }
+        }
+
+        // Buscar la palabra en las filas (horizontal)
+        for (int i = 0; i < filasSopa; i++) {
+            String fila = "";
+            for (int j = 0; j < columnasSopa; j++) {
+                fila += matriz[i][j];
+            }
+            if (fila.contains(palabra)) {
+                System.out.println("Palabra encontrada en la fila " + (i + 1) + ", columna " + (fila.indexOf(palabra) + 1) + " de izquierda a derecha.");
+                return; // Salir después de encontrar la palabra
+            }
+        }
+
+        // Buscar la palabra en las columnas (vertical)
+        for (int j = 0; j < columnasSopa; j++) {
+            StringBuilder columna = new StringBuilder();
+            for (int i = 0; i < filasSopa; i++) {
+                columna.append(matriz[i][j]);
+            }
+            if (columna.toString().contains(palabra)) {
+                System.out.println("Palabra encontrada en la columna " + (j + 1) + ", fila " + (columna.indexOf(palabra) + 1) + " de arriba hacia abajo.");
+                return; // Salir después de encontrar la palabra
+            }
+        }
+
+        // Si no se encuentra la palabra
+        System.out.println("La palabra no se encuentra en la sopa de letras.");
     }
 }

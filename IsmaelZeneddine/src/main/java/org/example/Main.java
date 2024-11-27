@@ -9,7 +9,7 @@ import org.example.TEMA3.Vectores;
 public class Main {
     public static void main(String[] args) {
         PRACTICAST3 practicast3 = new PRACTICAST3();
-        practicast3.pracica4();
+        practicast3.practica4();
     }
 }
 
