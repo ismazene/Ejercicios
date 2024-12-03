@@ -1,9 +1,9 @@
 package org.example;
+import org.example.TEMA1.*;
 import org.example.TEMA2.*;
-import org.example.TEMA3.EjerciciosT3;
-import org.example.TEMA3.Matrices;
-import org.example.TEMA3.PRACTICAST3;
-import org.example.TEMA3.Vectores;
+import org.example.TEMA3.*;
+
+
 
 
 public class Main {

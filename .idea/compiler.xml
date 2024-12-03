@@ -9,5 +9,8 @@
         <module name="IsmaelZeneddine" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="PROGRAMACION" target="23" />
+    </bytecodeTargetLevel>
   </component>
 </project>

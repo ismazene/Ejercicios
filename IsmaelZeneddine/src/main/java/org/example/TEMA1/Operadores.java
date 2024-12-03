@@ -1,4 +1,5 @@
-package org.example;
+package org.example.TEMA1;
+
 import java.util.Scanner;
 
 public class Operadores {
