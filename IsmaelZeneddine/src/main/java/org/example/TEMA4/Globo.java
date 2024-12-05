@@ -68,12 +68,6 @@ public class Globo {
         return 0;
     }
 
-
-
-
-
-
-
 }
 
 
