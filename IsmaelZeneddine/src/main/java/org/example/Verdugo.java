@@ -31,7 +31,7 @@ public class Verdugo {
         }
 
         if (letras.contains("ñ")) {
-            System.err.println("No uses la 'ñ', estamos usando el alfabeto inglés.");
+            System.err.println("No uses la ñ, estamos en el alfabeto ingles.");
             return "";
         }
 
@@ -40,6 +40,7 @@ public class Verdugo {
 
     public static String Comprobacion(String letras, String palabra) {
         int fallos = 0;
+        String acabarPrograma = ".";
 
         for (int i = 0; i < palabra.length(); i++) {
             char letra = palabra.charAt(i);
@@ -49,15 +50,21 @@ public class Verdugo {
         }
 
         if (fallos >= 7) {
-            return "AHORCADO";
+            System.err.println("AHORCADO");
         }
 
         for (int i = 0; i < palabra.length(); i++) {
             if (!letras.contains(String.valueOf(palabra.charAt(i)))) {
-                return "COLGANDO";
+                System.err.println("COLGANDO");
+
+            } else if (acabarPrograma.equals(".")) {
+                break;
+
+            } else {
+                System.err.println("SALVADO");
             }
         }
+        return "";
+    }
 
-        return "SALVADO";
-    }
-    }
+}
