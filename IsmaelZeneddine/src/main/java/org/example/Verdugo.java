@@ -1,14 +1,13 @@
 package org.example;
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class Verdugo {
 
     public static void principal() {
         String palabra = Usuario1();
-        String letras = Usuario2();
+        String letras = Usuario2Adivinador();
         String resultado = Comprobacion(letras, palabra);
-
-        System.out.println("Resultado del juego: " + resultado);
     }
 
     public static String Usuario1() {
@@ -16,26 +15,26 @@ public class Verdugo {
 
         System.out.println("¿Cuál es la palabra con la que vamos a jugar?");
         String palabra = teclado.next();
+        String palabraSinEspacios = palabra.trim();
+
+        if (palabra.length() > 100) {
+            System.err.println("No puedes poner más de 100 letras.");
+        }
+        if (palabra.length() > 100) {
+            System.err.println("No puedes poner más de 100 letras.");
+        }
         return palabra.toLowerCase();
     }
 
-    public static String Usuario2() {
+    public static String Usuario2Adivinador() {
         Scanner teclado = new Scanner(System.in);
 
         System.out.println("¿Cuáles son las letras con las que vamos a trabajar?");
         String letras = teclado.next();
+        String letrasSinEspacios = letras.trim();
 
-        if (letras.length() > 100) {
-            System.err.println("No puedes poner más de 100 letras.");
-            return "";
-        }
-
-        if (letras.contains("ñ")) {
-            System.err.println("No uses la ñ, estamos en el alfabeto ingles.");
-            return "";
-        }
-
-        return letras.toLowerCase();
+        String letrasUsario2[] = letras.split("");
+        return letras;
     }
 
     public static String Comprobacion(String letras, String palabra) {
@@ -55,13 +54,13 @@ public class Verdugo {
 
         for (int i = 0; i < palabra.length(); i++) {
             if (!letras.contains(String.valueOf(palabra.charAt(i)))) {
-                System.err.println("COLGANDO");
+                System.out.println("COLGANDO");
 
             } else if (acabarPrograma.equals(".")) {
                 break;
 
             } else {
-                System.err.println("SALVADO");
+                System.out.println("SALVADO");
             }
         }
         return "";

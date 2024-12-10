@@ -6,6 +6,7 @@ public class EjerciciosT3 {
     Scanner teclado = new Scanner(System.in);
     Random aleatorio = new Random();
 
+    // Generar 10 números aleatorios entre 0 y 500, sumarlos y mostrar el resultado
     public void ejer1() {
         Random aleatorio = new Random();
         int numeros[] = new int[10];
@@ -18,6 +19,7 @@ public class EjerciciosT3 {
         System.out.println("La suma de los elementos es = " + suma);
     }
 
+    // Pedir al usuario 5 números y mostrarlos en orden inverso
     public void ejer2() {
         int numeros[] = new int[5];
         System.out.println("Introduce los numeros a invertir");
@@ -30,6 +32,7 @@ public class EjerciciosT3 {
         }
     }
 
+    // Generar 25 números aleatorios entre 0 y 100, pedir uno al usuario y contar cuántas veces aparece
     public void ejer3() {
         Random aleatorio = new Random();
         int numeros[] = new int[25];
@@ -50,6 +53,7 @@ public class EjerciciosT3 {
         System.out.println("El numero " + num + " aparece " + contador + " veces en el array ");
     }
 
+    // Rotar un array de números hacia la derecha
     public void ejer5() {
         int numeros[] = {3, 5, 2, 1, 4};
         int ultima_posicion = numeros[numeros.length - 1];
@@ -66,6 +70,7 @@ public class EjerciciosT3 {
         }
     }
 
+    // Eliminar duplicados en un array (código incompleto, solo la idea inicial)
     public void eliminarDuplicados() {
         int vector1[] = {1, 1, 6, 7, 8, 8, 10, 15, 15};
         int vectorAux[] = new int[vector1.length];
@@ -106,7 +111,6 @@ public class EjerciciosT3 {
                 matriz[i][j] = teclado.nextInt();
             }
         }
-
         System.out.println("Introduce el número que deseas buscar en la matriz:");
         int numeroBuscar = teclado.nextInt();
         boolean existe = true;
