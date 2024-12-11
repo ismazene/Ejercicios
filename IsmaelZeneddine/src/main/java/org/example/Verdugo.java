@@ -2,6 +2,12 @@ package org.example;
 import java.util.Scanner;
 import java.util.Arrays;
 
+/**
+ * Proyecto del ProgramaMe
+ * @author Ismael
+ * @version 1.0 (11/12/2024)
+ */
+
 public class Verdugo {
 
     public static void principal() {
@@ -17,13 +23,11 @@ public class Verdugo {
         String palabra = teclado.next();
         String palabraSinEspacios = palabra.trim();
 
-        if (palabra.length() > 100) {
+        if (palabraSinEspacios.length() > 100) {
             System.err.println("No puedes poner más de 100 letras.");
         }
-        if (palabra.length() > 100) {
-            System.err.println("No puedes poner más de 100 letras.");
-        }
-        return palabra.toLowerCase();
+        String palabraMinuscula = palabra.toLowerCase();
+        return  palabraMinuscula;
     }
 
     public static String Usuario2Adivinador() {
@@ -34,36 +38,41 @@ public class Verdugo {
         String letrasSinEspacios = letras.trim();
 
         String letrasUsario2[] = letras.split("");
+        System.out.println(Arrays.toString(letrasUsario2));
         return letras;
     }
 
-    public static String Comprobacion(String letras, String palabra) {
-        int fallos = 0;
-        String acabarPrograma = ".";
+    public static String Comprobacion(String letrasUsario2, String palabraMinuscula) {
+        for (int i = 0; i<letrasUsario2.length();i++){
+            for (int j = 0; Integer.parseInt(letrasUsario2[i]); i++){
 
-        for (int i = 0; i < palabra.length(); i++) {
-            char letra = palabra.charAt(i);
-            if (!letras.contains(String.valueOf(letra))) {
-                fallos++;
             }
         }
 
-        if (fallos >= 7) {
-            System.err.println("AHORCADO");
-        }
 
-        for (int i = 0; i < palabra.length(); i++) {
-            if (!letras.contains(String.valueOf(palabra.charAt(i)))) {
-                System.out.println("COLGANDO");
-
-            } else if (acabarPrograma.equals(".")) {
-                break;
-
-            } else {
-                System.out.println("SALVADO");
-            }
-        }
         return "";
     }
-
 }
+    //Para salirse con el punto solo debemos hacerlo con el if(hasNext) sirve para saber si el usuario da algo o no.
+//    public class solution {
+//
+//        static java.util.Scanner in;
+//
+//        public static boolean casoDePrueba() {
+//            if (!in.hasNext())
+//                return false;
+//            else {
+//                // CÓDIGO PRINCIPAL AQUÍ
+//                // (incluyendo la lectura del caso de prueba)
+//                return true;
+//            }
+//        } // casoDePrueba
+//
+//        public static void main(String[] args) {
+//            in = new java.util.Scanner(System.in);
+//            while (casoDePrueba()) {
+//            }
+//        } // main
+//
+//    } // class solution
+

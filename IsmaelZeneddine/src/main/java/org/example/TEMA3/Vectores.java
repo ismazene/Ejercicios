@@ -22,8 +22,9 @@ public class Vectores {
         final String palabra = "NAVIDAD";
         System.out.println("Introduce las letras a mostrar...");
         String cantidad = teclado.nextLine();
+        String cantidadMayuscula = cantidad.toUpperCase();
 
-        String cantidades[] = cantidad.split(" ");
+        String cantidades[] = cantidadMayuscula.split(" ");
         String letras[] = palabra.split("");
 
         System.out.println(Arrays.toString(cantidades));
