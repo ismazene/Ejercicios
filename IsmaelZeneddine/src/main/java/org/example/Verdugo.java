@@ -3,19 +3,24 @@ import java.util.Scanner;
 
 /**
  * Proyecto del ProgramaMe: Juego del Ahorcado/Verdugo
- * @author
- * @version 1.1 (12/12/2024)
+ * @author Ismael
+ * @version 1.1 (17/12/2024)
  */
 
 public class Verdugo {
-    Scanner teclado = new Scanner(System.in);
 
-    public void principal() {
+    public static void principal() {
+        Scanner teclado = new Scanner(System.in);
         String resultado;
 
         while (true) {
-            String respuesta = teclado.next().trim();
+            String respuesta = teclado.nextLine().trim();
             if (respuesta.equals(".")) {
+                break;
+            }
+
+            // Validación para no permitir números
+            if (!respuesta.matches("[a-zA-Z]+")) {
                 break;
             }
 
@@ -34,7 +39,18 @@ public class Verdugo {
 
     public static String[] usuario2Adivinador() {
         Scanner teclado = new Scanner(System.in);
-        String letras = teclado.next().trim().toLowerCase();
+        String letras;
+
+        while (true) {
+            letras = teclado.nextLine().trim().toLowerCase();
+
+            // Validación para no permitir números
+            if (!letras.matches("[a-zA-Z]+")) {
+            } else {
+                break;
+            }
+        }
+
         String[] letrasUsuario2 = letras.split("");
         return letrasUsuario2;
     }
@@ -43,12 +59,13 @@ public class Verdugo {
         int falladas = 0;
         String letrasAcertadas = "";
         String letrasFalladas = "";
+        int letrasEncontradas = 0; // Contador de letras correctas encontradas
 
         for (int i = 0; i < letrasUsuario2.length; i++) {
             String letra = letrasUsuario2[i];
 
             if (letrasAcertadas.contains(letra) || letrasFalladas.contains(letra)) {
-                continue;
+                continue; // Ignora letras repetidas
             }
 
             boolean encontrada = false;
@@ -60,9 +77,10 @@ public class Verdugo {
             }
 
             if (encontrada) {
-                letrasAcertadas += letra;
+                letrasAcertadas += letra; // Añade letra a acertadas
+                letrasEncontradas++;
             } else {
-                letrasFalladas += letra;
+                letrasFalladas += letra; // Añade letra a falladas
                 falladas++;
             }
 
@@ -70,12 +88,10 @@ public class Verdugo {
                 return "AHORCADO";
             }
 
-            if (letrasAcertadas.length() == letrasUsuario1.length) {
+            if (letrasEncontradas == letrasUsuario1.length) {
                 return "SALVADO";
-            } else {
-                return "COLGANDO";
             }
         }
-        return "";
+        return "COLGANDO";
     }
 }
