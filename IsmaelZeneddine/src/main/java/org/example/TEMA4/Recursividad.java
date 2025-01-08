@@ -53,30 +53,31 @@ public class Recursividad {
         System.out.println("Introduce el segundo numero");
         int num2 = teclado.nextInt();
 
-        if (num1 < 0 || num2 < 0 ){
+        if (num1 < 0 || num2 < 0) {
             System.err.println("Los numeros deben ser positivos");
         } else {
             int resultado = 1;
             for (int i = 0; i < num1; i++) {
-                 resultado *= num2;
+                resultado *= num2;
             }
             System.out.println("El resultado es" + resultado);
         }
     }
     public static void main(String[] args) {
         // Llamamos a Principal y obtenemos la elección del usuario
-        int numCase = Principal();
-
-        // Ejecutamos el ejercicio correspondiente
-        switch (numCase) {
-            case 1:
-                Ejer1();
-                break;
-            case 2:
-                Ejer2();
-                break;
-            default:
-                System.out.println("Opción no válida");
+        while (true) {
+            int numCase = Principal();
+            // Ejecutamos el ejercicio correspondiente
+            switch (numCase) {
+                case 1:
+                    Ejer1();
+                    break;
+                case 2:
+                    Ejer2();
+                    break;
+                default:
+                    System.out.println("Opción no válida");
+            }
         }
     }
 }
