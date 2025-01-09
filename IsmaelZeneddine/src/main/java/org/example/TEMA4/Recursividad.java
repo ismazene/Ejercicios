@@ -4,9 +4,7 @@ import java.util.Scanner;
 
 public class Recursividad {
 
-    // Este método debería retornar la selección del usuario
-    public static int Principal() {
-        Scanner teclado = new Scanner(System.in);
+    public static void imprimirMenu() {
 
         System.out.println("***Bateria de ejercicios sobre recursividad***");
         System.out.println("Selecciona a continuación el modo que quieras ejecutar...");
@@ -19,10 +17,8 @@ public class Recursividad {
         System.out.println("6- Orden alfabetico");
         System.out.println("7- Mostrar suma");
 
-        // Aquí ya no es necesario el parámetro numCase
-        int numCase = teclado.nextInt();
-        return numCase;
     }
+
     public static void Ejer1() {
         Scanner teclado = new Scanner(System.in);
 
@@ -45,6 +41,7 @@ public class Recursividad {
             System.out.println("El numero de dígitos de " + num + " es: " + contador);
         }
     }
+
     public static void Ejer2() {
         Scanner teclado = new Scanner(System.in);
 
@@ -63,21 +60,52 @@ public class Recursividad {
             System.out.println("El resultado es" + resultado);
         }
     }
-    public static void main(String[] args) {
-        // Llamamos a Principal y obtenemos la elección del usuario
-        while (true) {
-            int numCase = Principal();
-            // Ejecutamos el ejercicio correspondiente
-            switch (numCase) {
-                case 1:
-                    Ejer1();
-                    break;
-                case 2:
-                    Ejer2();
-                    break;
-                default:
-                    System.out.println("Opción no válida");
-            }
+
+    public static void menuFinal() {
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("");
+        System.out.println("Elige una opcion");
+        System.out.println("[M] - Volver al menú principal");
+        System.out.println("[X] - SALIR");
+        String opcionfinal = teclado.next();
+        String OpcionFinalMayusculas = opcionfinal.toUpperCase();
+
+
+        switch (OpcionFinalMayusculas) {
+            case "M":
+                System.out.flush();
+                imprimirMenu();
+                break;
+            case "X":
+                System.exit(0);
         }
     }
+
+    public static int seleccionarEjer(){
+        Scanner teclado = new Scanner(System.in);
+        int numCase = teclado.nextInt();
+        return numCase;
+    }
+
+    public static void main(String[] args) {
+        imprimirMenu();
+        int numCase = seleccionarEjer();
+
+        switch (numCase) {
+            case 1:
+                Ejer1();
+                menuFinal();
+                while (true){
+                    imprimirMenu();
+            }
+            case 2:
+                Ejer2();
+                menuFinal();
+                break;
+            default:
+                System.out.println("Opción no valida");
+        }
+
+    }
 }
+todo dentro de un while truuuuuueeee

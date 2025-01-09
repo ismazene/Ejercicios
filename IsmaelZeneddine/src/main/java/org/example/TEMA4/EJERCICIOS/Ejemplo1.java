@@ -1,7 +1,6 @@
-package org.example.TEMA4;
-import java.util.Scanner;
+package org.example.TEMA4.EJERCICIOS;
 
-public class Ejercicios {
+public class Ejemplo1 {
     public static void Ejer1(int contB, int contA, int n) {
 
         if (contB < contA) {
@@ -13,9 +12,10 @@ public class Ejercicios {
                 Ejer1(0, contA + 1, n);
         }
     }
-
     public static void main(String[] args) {
         int altura = 3;
         Ejer1(0, 0, altura);
     }
+
 }
+
